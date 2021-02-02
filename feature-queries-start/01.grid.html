@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Feature queries voorbeeld met grid - progressive enhancement</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <style>
+    /* Dé manier om oudere browsers toch een minimale dienstverlening aan te bieden is te werken met een mobile ﬁrst aanpak
+Je gaat m.a.w. eerst een mobiele versie van de pagina maken waarbij alle kolommen onder elkaar komen te staan
+Alle elementen nemen dan zowat de gehele breedte in van de pagina
+Bij grotere schermen van niet-ondersteunende browsers zet je een maximum breedte met de max-width eigenschap. 
+Zo verhinder je dat je elementen heel breed worden
+Binnen de @supports query staat dan de overige CSS, voor moderne browsers die grid wel ondersteunen*/
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    header {
+        background-color: blue;
+        height: 25vh;
+        padding: 15vh 5vh 0 5vh;
+    }
+
+    nav {
+        background-color: lightblue;
+        height: 5vh;
+    }
+
+    main {
+        background-color: yellow;
+        padding: 5vh;
+    }
+
+    div {
+        background-color: orange;
+        height: 17.5vh;
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+
+    footer {
+        background-color: red;
+        height: 25vh;
+    }
+
+    /*indien de browser grid ondersteunt, wordt onderstaande code uitgevoerd*/
+    @supports (grid-area: auto) {
+        div{
+            max-width: none;
+            width: 100%;
+        }
+        main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5vh;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav></nav>
+    </header>
+    <main>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </main>
+    <footer>
+    </footer>
+</body>
+
+</html>

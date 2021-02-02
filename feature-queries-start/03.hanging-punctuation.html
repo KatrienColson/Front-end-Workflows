@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hanging punctuation</title>
+    <style>
+    blockquote {
+        font-family: Garamond, Times New Roman, Times, serif;
+        font-style: italic;
+        font-size: 2rem;
+        width: 20em;
+        margin: 2rem auto;
+        border-left: 1px solid #ddd;
+        padding: 3rem 0;
+    }
+
+    /*  https://developer.mozilla.org/en-US/docs/Web/CSS/hanging-punctuation*/
+    /*https://caniuse.com/#search=hanging-punctuation*/
+    /* Enkel indien de browser de nieuwe CSS property hanging-punctuation ondersteunt, wordt de code die we hieronder gaan toevoegen toegepast.*/
+    @supports (hanging-punctuation: first) {
+        blockquote{
+            hanging-punctuation: first;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <blockquote>
+        &ldquo;Your time is limited, so don’t waste it living someone else’s life. Don’t be trapped by dogma, which is living with the results of other people’s thinking. And most important, have the courage to follow your heart and intuition. They somehow already know what you truly want to become. Everything else is secondary.&rdquo; — Steve Jobs
+    </blockquote>
+</body>
+
+</html>
