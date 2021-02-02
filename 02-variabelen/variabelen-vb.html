@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variabelen voorbeeld</title>
+</head>
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS variabelen voorbeeld</title>
+    <style>
+    :root{
+        --ball-color: lightblue;
+        --bg-color: black;
+        --border-color: white;
+        --ball-width: 300px;
+        --ball-height: 300px;
+    }
+
+    body {
+        background-color: var(--bg-color);
+    }
+
+    .element {
+        width: var(--ball-width);
+        height: var(--ball-height);
+        border: 5px solid var(--border-color);
+        border-radius: 50%;
+        margin: 5rem auto;
+        background-color: var(--ball-color, salmon);/*falback color "salmon" is niet nodig*/
+        transition: 500ms linear;
+    }
+
+    .element:hover {
+        --ball-color: hotpink;
+        /* background-color: var(--ball-color); */
+        transform: scale(1.2);
+    }
+
+    .element.dark {
+        width: calc(var(--ball-width) / 2);
+        height: calc(var(--ball-height) / 2);
+        --ball-color: black;
+    }
+
+    .element.light {
+        --ball-color: var(--border-color);
+    }
+    </style>
+</head>
+
+<body>
+    <div class="element"></div>
+    <div class="element dark"></div>
+    <div class="element light"></div>
+</body>
+
+</html>
