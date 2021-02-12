@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS min(), CSS max() and CSS clamp() Example</title>
+    <style>
+    html {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body {
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    div {
+        padding: .5rem;
+    }
+
+    .css-min {
+        background-color: pink;
+        width: min(50vw, 700px);
+        height: 100px;
+    }
+
+    .css-max {
+        background-color: hotpink;
+        width: max(50vw, 700px);
+        height: 100px;
+    }
+
+    .css-clamp {
+        background-color: deeppink;
+        width: clamp(400px, 60vw, 600px);/*voorkeur is 60vw, 400px is het kleinste, 600px is het grootste*/
+        height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="css-min">CSS Min() Example - If the viewport at 50vw is less than 700px, I take the value of 50vw, otherwise, I stay at 700px.</div>
+    <br />
+    <div class="css-max">CSS Max() Example - If the viewport at 50vw is greater than 700px, I take whatever 50vw's value is, otherwise, I stay at 700px.</div>
+    <br />
+    <div class="css-clamp">CSS Clamp() Example - If the preferred value of 60vw is smaller than 400px, the div will stop shrinking when it reaches that lower bound. Likewise if 60vw is larger than 600px, the div will stop growing when it reaches that upper bound.</div>
+</body>
+
+</html>
