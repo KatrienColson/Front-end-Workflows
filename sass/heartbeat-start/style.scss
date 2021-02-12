@@ -1,0 +1,73 @@
+body {
+    background-color: #333;
+    padding-top: 10rem;
+    text-align: center
+}
+
+#smiley-love {
+    #smiley-blush {
+        display: none;
+    }
+
+    a {
+        display: inline-block;
+
+        &:hover {
+            #smiley {
+                transform: scale(1.1);
+                transform-origin: center;
+                animation: heartbeat 1.5s ease-in-out infinite both;
+            }
+
+            #smiley-blush {
+                display: inherit;
+            }
+
+            #smiley-eye-left {
+                transform-origin: center;
+                transform: scale(0.7) translate(-8px);
+            }
+
+            #smiley-eye-right {
+                transform-origin: center;
+                transform: scale(0.7) translate(8px);
+            }
+
+            #smiley-mouth {
+                transform-origin: center;
+                transform: translateY(-22px) scale(1.6);
+
+            }
+        }
+    }
+}
+
+
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center;
+        animation-timing-function: ease-out;
+    }
+
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
+}
