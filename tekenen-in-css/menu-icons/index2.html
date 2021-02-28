@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+<title>apple navbar</title>
+
+<script>
+    var categoryId = null;
+</script>
+</head>
+
+<body>
+
+    
+<style type="text/css">
+section[role="main"] {
+    background: #000 url(http://zurb.com/playground/uploads/upload/upload/88/maelstrom.png) center -86px no-repeat;
+}
+#osxdock-page {
+    color: #fff;
+    padding-bottom: 2em;
+    margin-bottom: -2em;
+}
+#osxdock-page h1, #osxdock-page h2 {
+    color: #fff;
+}
+div#sidebarAd.cleanslate {
+    background: rgba(0,0,0,0.5) !important;
+    color: #fff !important;
+}
+div#sidebarAd.cleanslate .ad-sponsor {
+    color: #ccc;
+}
+.zurb-footer-top {
+    background: #222;
+}
+  /* Dock styles */
+
+div.cap { 
+    display: block; 
+    height: 100px; 
+    width: 40px; 
+    background: url("https://d33wubrfki0l68.cloudfront.net/572492a49d39a2d0b9950e45d934fe77e3464261/d9a70/playground/playground/osx-dock/dock-background-left.png") bottom left no-repeat; 
+}
+div.cap.left { 
+    position: absolute; 
+    bottom: 0px; 
+    left: 0px; 
+}
+div.cap.right { 
+    background-position: right bottom; 
+    position: absolute; top: 0px; 
+    right: 0px; 
+}
+ul.osx-dock { 
+    display: inline-block; 
+    height: 130px; 
+    padding: 0 40px 0 0; 
+    background: url("https://d33wubrfki0l68.cloudfront.net/572492a49d39a2d0b9950e45d934fe77e3464261/d9a70/playground/playground/osx-dock/dock-background-left.png") no-repeat right bottom; overflow: hidden; margin: 0 0 0 40px; 
+}
+ul.osx-dock li { 
+    display: block; 
+    position: relative; 
+    float: left; 
+    width: 50px; 
+    height: 50px; 
+    margin: 60px 0 4px 0; 
+    -webkit-transition: 0.15s linear; 
+    -webkit-transition-property: -webkit-transform margin; 
+    text-align: center; 
+}
+ul.osx-dock li a { 
+    display: block; 
+    height: 50px; 
+    padding: 0 1px; 
+    -webkit-transition: 0.15s linear; -webkit-transition-property: -webkit-transform margin; margin: 0;
+    -webkit-box-reflect: below 2px
+    -webkit-gradient(linear, left top, left bottom, from(transparent),
+    color-stop(0.45, transparent), to(rgba(255, 255, 255, 0.25)));
+}
+ul.osx-dock li a img { 
+    width: 48px; 
+}
+ul.osx-dock li:hover {
+    margin-left: 9px; margin-right: 9px;
+    z-index: 200;
+}
+ul.osx-dock li:hover a {
+    -webkit-transform-origin: center bottom;
+    -webkit-transform: scale(1.5);
+}
+ul.osx-dock li.nearby {
+    margin-left: 6px; margin-right: 6px;
+    z-index: 100;
+}
+ul.osx-dock li.nearby a {
+    -webkit-transform-origin: center bottom;
+    -webkit-transform: scale(1.25);
+}
+
+ul.osx-dock li span { background: rgba(0,0,0,0.75); 
+    position: absolute; 
+    bottom: 80px; 
+    margin: 0 auto; 
+    display: none; 
+    width: auto; 
+    font-size: 11px; 
+    font-weight: bold; 
+    padding: 3px 6px; 
+    -webkit-border-radius: 6px; 
+    color: #fff; 
+}
+ul.osx-dock li:hover span { 
+    display: block; 
+}
+
+div#dockContainer { 
+    position: fixed; 
+    bottom: 12px; 
+    height: 120px; 
+    padding: 50px 0 0; 
+    text-align: center; 
+    -webkit-border-radius: 6px; -moz-border-radius: 6px; 
+    width: 100%; 
+    line-height: 1; 
+    z-index: 100; 
+}
+div#dockWrapper {
+    width: auto; 
+    display: inline-block;
+    position: relative; 
+    border-bottom: solid 2px rgba(255,255,255,.35); 
+    line-height: 0; 
+    }
+#dockContainer, #dockContainer * {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box 
+    }
+
+</style>
+
+<div id="dockContainer">
+    <div id="dockWrapper">
+    <div class="cap left">
+        
+    </div>
+        <ul class="osx-dock">
+            <li class="active">
+            <span>Pinterest</span>
+            <a href="https://www.pinterest.com" title="pinterest"><img alt="pinterest icon" src="./img/pinterest.png" /></a>
+            </li>
+            <li>
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com" title="LinkedIn"><img alt="Linkedin icon" src="./img/linkedin.png" /></a>
+            </li>
+            <li>
+            <span>Notable</span>
+            <a href="https://www.facebook.com" title="Facebook"><img alt="Facebook icon" src="./img/facebook.png" /></a>
+            </li>
+            <li>
+            <span>last.fm</span>
+            <a href="https://www.instagram" title="Instagram"><img alt="Instagram icon" src="./img/instagram.png" /></a>
+            </li>
+            <li>
+            <span>Facebook</span>
+            <a href="https://www.facebook.com" title="Facebook"><img alt="Facebook icon" src="https://d33wubrfki0l68.cloudfront.net/c0779bcdd947e205883f2046aad14b2d66c8f382/f8bfd/playground/uploads/upload/upload/150/facebook-icon.png" /></a>
+            </li>
+            <li>
+            <span>Google</span>
+            <a href="https://www.google.com" title="Google"><img alt="Google icon" src="https://d33wubrfki0l68.cloudfront.net/8f32f44c52d529a545730639e257bcb781bdf16b/a8702/playground/uploads/upload/upload/153/google-icon.png" /></a>
+            </li>
+            <li>
+            <span>Notable</span>
+            <a href="https://www.notableapp.com" title="Notable"><img alt="Notable icon" src="https://d33wubrfki0l68.cloudfront.net/b3e14a060fea6c79f7bce1a406dbb1b52c76e32a/0c544/playground/uploads/upload/upload/152/notable-icon.png" /></a>
+            </li>
+            <li>
+            <span>last.fm</span>
+            <a href="https://www.last.fm" title="Last.fm"><img alt="Lastfm icon" src="https://d33wubrfki0l68.cloudfront.net/d377f15c758e68f4ef77ce4be6434902fc2d4a6b/cbab8/playground/uploads/upload/upload/155/lastfm-icon.png" /></a>
+            </li>
+            <li>
+            <span>Facebook</span>
+            <a href="https://www.facebook.com" title="Facebook"><img alt="Facebook icon" src="https://d33wubrfki0l68.cloudfront.net/c0779bcdd947e205883f2046aad14b2d66c8f382/f8bfd/playground/uploads/upload/upload/150/facebook-icon.png" /></a>
+            </li>
+            <li>
+            <span>Google</span>
+            <a href="https://www.google.com" title="Google"><img alt="Google icon" src="https://d33wubrfki0l68.cloudfront.net/8f32f44c52d529a545730639e257bcb781bdf16b/a8702/playground/uploads/upload/upload/153/google-icon.png" /></a>
+            </li>
+        </ul>   
+    </div>
+</div>
+
+
+<script type="text/javascript">
+  	// Place all Javascript code here
+
+        $(document).ready(function(){
+            $("ul.osx-dock li").each(function (type) {
+                $(this).hover(function () {
+                    $(this).prev("li").addClass("nearby");
+                    $(this).next("li").addClass("nearby");
+                },
+                function () {
+                    $(this).prev("li").removeClass("nearby");
+                    $(this).next("li").removeClass("nearby");
+                });
+            });
+        });
+
+	</script>
+</body>
+</html>
