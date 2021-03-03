@@ -1,26 +1,25 @@
-
 @use 'sass:map';
-@use'./abstracts/variables'as vars;
+@use './abstracts/variables' as vars;
 
-//reset
 html {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
 *:before,
 *:after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
-
 
 //base
+
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
     background-color: map.get($map: vars.$secondary-colors, $key: white);
 }
-a{
-    text-decoration: none;
+
+a {
+  text-decoration: none;
 }

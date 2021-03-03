@@ -1,7 +1,8 @@
 @charset "utf-8";
-// abstracts importeren we hier niet enkel in de partials
-@use './vendors/normalize';
 
+//abstracts importeren we hier niet, enkel in de partials
+
+@use './vendors/normalize';
 @use './themes/new';
 
 @use './base/base';
@@ -9,10 +10,11 @@
 @use './base/helpers';
 @use './base/typography';
 
-@use './layout/footer';
+@use './layout/footers';
 @use './layout/grid';
 @use './layout/header';
 
 @use './components/buttons';
 
 @use './pages/home';
+

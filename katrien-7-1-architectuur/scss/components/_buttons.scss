@@ -1,17 +1,18 @@
 @use 'sass:map';
-@use'./abstracts/variables'as vars;
+@use './abstracts/variables' as vars;
 
-.button{
-    border: none;
-    padding: 15px;
-    background-color: map.get($map: vars.$colors, $key: color1);
-    color: map.get($map: vars.$secondary-colors, $key: white);
-    text-transform: uppercase;
-    font-weight: 900;
-    transition: 400ms;
+.button {
+            border: none;
+            padding: 15px;
+            background-color: map.get($map: vars.$colors, $key: color1);
+            color: map.get($map: vars.$secondary-colors, $key: white);
+            text-transform: uppercase;
+            font-weight: 900;
+            transition: 400ms;
 
-    &:hover{
-        background-color: map.get($map: vars.$colors, $key: color2);
-        color: map.get($map: vars.$secondary-colors, $key: black);
-    }
-}
+            &:hover {
+                background-color: map.get($map: vars.$colors, $key: color2);
+                color: map.get($map: vars.$secondary-colors, $key: black);
+            }
+
+        }

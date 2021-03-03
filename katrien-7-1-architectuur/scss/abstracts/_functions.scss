@@ -1,5 +1,4 @@
-//functions
-
-@function pxtorem($px){
-    @return($px / 16)+rem;
+//function
+@function pxtorem($px) {
+  @return ($px / 16) + rem;
 }
