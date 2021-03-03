@@ -1,0 +1,10 @@
+
+@use './abstracts/extends';
+
+footer{
+    #footerWrapper{
+        @extend %flex-center-wrap-column;
+        height: 200px;
+
+    }
+}

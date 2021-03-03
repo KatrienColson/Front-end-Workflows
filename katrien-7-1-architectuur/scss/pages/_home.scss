@@ -1,0 +1,22 @@
+@use 'sass:map';
+@use'./abstracts/variables'as vars;
+@use'./abstracts/functions' as func;
+
+//MAIN COLORBLOCKS
+#colorBlocks{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .color-block{
+        height: func.pxtorem(150);
+        //flex-basis: 20%; //hier maak je ze gelijkmatig
+    }
+    
+    //classes dynamisch gegenereerd
+    @each $key, $color in vars.$colors{
+        .#{$key}{
+            background-color: $color;
+        }
+    }
+}

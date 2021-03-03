@@ -1,0 +1,10 @@
+@use 'sass:math';
+
+// LOOP, hier maakt hij al zijn rijen aan zie css
+@for $i from 1 through 12{
+    $width: math.percentage($i/12);
+
+    .col-#{$i}{
+        flex-basis: $width;
+    }
+}

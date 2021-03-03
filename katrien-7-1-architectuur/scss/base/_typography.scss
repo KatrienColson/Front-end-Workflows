@@ -1,0 +1,8 @@
+@use 'sass:map';
+@use'./abstracts/variables'as vars;
+
+//base
+body {
+    color: map.get($map: vars.$secondary-colors, $key: black);
+    font-family: vars.$text-font;
+}
