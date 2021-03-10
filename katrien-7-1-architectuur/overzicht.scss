@@ -1,4 +1,4 @@
-van lange naar korte manier
+//van lange naar korte manier
 
 @use './abstracts/variables';
 variables.$fonts
@@ -11,15 +11,15 @@ $fonts
 
 
 
-extra bestand aanmaken in abstracts:
-_index.scss
+//extra bestand aanmaken in abstracts:
+// _index.scss
 @forward './abstracts/variables' as *;
 @forward './abstracts/mixins' as *;
 @forward './abstracts/mediamixins' as *;
 @forward './abstracts/extends';
 @forward './abstracts/functions' as *;
 
-zet dan in al je bestanden 
+//zet dan in al je bestanden 
 @use './abstracts/index';
-of
+//of
 @use './abstracts' as *;
