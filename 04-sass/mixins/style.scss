@@ -1,0 +1,123 @@
+// mixin om mediaqueries te standarizeren
+// deze kun je makkelijk gebruiken om mediaqueries te gebruiken op een pagina, d.m.v. de if kun je makkelijk aangeven welke mediaquerie je wilt gebruiken.
+
+// met vaste variabele kun je het aantal pixels bepalen
+$breakpoint-small: 600px;
+$breakpoint-med-small: 960px;
+$breakpoint-med: 1175px;
+
+@mixin screen($size, $type: max, $pixels: $breakpoint-small) {
+  @if $size == 'small' {
+    @media screen and (max-width: $breakpoint-small) {
+      @content;
+    }
+  } @else if $size == 'med-small' {
+    @media screen and (max-width: $breakpoint-med-small) {
+      @content;
+    }
+  } @else if $size == 'med' {
+    @media screen and (max-width: $breakpoint-med) {
+      @content;
+    }
+  } @else if $size == 'large' {
+    @media screen and (max-width: $breakpoint-med) {
+      @content;
+    }
+  } @else if $size == 'custom' {
+    @media screen and (max-width: $pixels + 'px') {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// mixin met nth-child om bepaalde elementen in de html aan te wijzen
+// hiermee kun je gemakkelijk aanwijzen welke child element je zou willen customizen, mocht er meerdere elementen zijn, zoals een bepaalde p
+@mixin has-nth($expression) {
+  &:nth-child(#{$expression}) {
+    @content;
+  }
+}
+
+
+// mixin met flex
+// gemakkelijk om overal aan te geven waar je flex wilt implementeren
+@mixin flex {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+// zo is er ook een voor grid
+@mixin grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  grid-auto-rows: auto;
+}
+
+
+// mixin voor themes
+// deze mixin kun je zelf je theme mee aangeven, als je aan een bepaald element een ander kleur thema zou willen koppelen
+@mixin theme($name, $color) {
+  $primary: $color;
+  $secondary: lighten(adjust-hue($color, 20), 10%);
+  // Add your classes with css colors added
+  .#{$name} {
+    .col {
+      color: $primary;
+    }
+    .col {
+      background: $secondary;
+    }
+  }
+}
+
+
+//mixin met consistence font-sizing
+// d.m.v. een functie kun je het systeem makkelijk de font-zise zelf laten bereken
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+// dit is de mixin die de functie aanroep
+@mixin font-size($size) {
+  font-size: calculateRem($size);
+}
+
+
+// hieronder zijn wat voorbeeld elementen opgemaakt
+p {
+  @include has-nth('2') {
+    color: #fff;
+    text-transform: uppercase;
+    @include font-size(30px);
+  }
+}
+
+.container {
+  @include flex;
+  margin: auto;
+
+  @include theme(row, black);
+
+  @include screen(large) {
+    width: 20%;
+    background: #000;
+  }
+  @include screen(med) {
+    width: 40%;
+    background: #ff0000;
+  }
+  @include screen(med-small) {
+    width: 60%;
+    background: #00ff00;
+  }
+  @include screen(small) {
+    width: 80%;
+    background: #0000ff;
+  }
+  @include screen(custom, max, 400) {
+    width: 100%;
+    background: #000;
+  }
+}

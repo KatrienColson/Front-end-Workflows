@@ -1,0 +1,50 @@
+p:nth-child(2) {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.875rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+  margin: auto;
+}
+.container .row .col {
+  color: black;
+}
+.container .row .col {
+  background: #1a1a1a;
+}
+@media screen and (max-width: 1175px) {
+  .container {
+    width: 20%;
+    background: #000;
+  }
+}
+@media screen and (max-width: 1175px) {
+  .container {
+    width: 40%;
+    background: #ff0000;
+  }
+}
+@media screen and (max-width: 960px) {
+  .container {
+    width: 60%;
+    background: #00ff00;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 80%;
+    background: #0000ff;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    width: 100%;
+    background: #000;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -29,9 +29,9 @@ $nav-list-item-gap: 20px;
 
 /* media query */
 @mixin xs {
-  @media screen and (max-width: 600px) {
+	@media screen and (max-width: 600px) {
     @content;
-  }
+	}
 }
 
 .body {
@@ -43,7 +43,7 @@ $nav-list-item-gap: 20px;
 	grid-column-gap: 5px;
 	@include xs {
 		grid-template-rows: repeat(4, auto);
-  }
+  	}
 }
 
 .header, .footer {
