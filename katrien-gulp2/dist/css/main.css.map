@@ -1,0 +1,1 @@
+{"version":3,"sources":["main.scss","main.css"],"names":[],"mappings":"AAAA,KACI,wBCCJ","file":"main.css","sourcesContent":["body {\r\n    background-color: #00f300;\r\n}","body {\n  background-color: #00f300;\n}"]}

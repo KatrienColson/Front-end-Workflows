@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "..\\..\\..\\Desktop\\katrien-npm"
+		},
+		{
+			"path": "..\\..\\..\\Desktop\\katrien-gulp"
+		}
+	],
+	"settings": {
+		"editor.fontFamily": "monospace",
+		"liveServer.settings.multiRootWorkspaceName": "katrien-gulp"
+	}
+}
