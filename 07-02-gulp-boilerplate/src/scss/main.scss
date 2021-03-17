@@ -1,0 +1,189 @@
+body {
+  margin: 0 auto;
+  font-family: sans-serif;
+  line-height: 1.5rem;
+  color: #444;
+}
+
+.main-header {
+  background-color: black;
+  padding: 2rem 0;
+  margin-bottom: 4rem;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  float: left;
+}
+
+.main-nav {
+  float: right;
+  margin-top: 2rem;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.main-nav a {
+  color: grey;
+  margin: 0 2rem;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.logo a {
+  color: inherit;
+}
+
+.page-title {
+  border-bottom: 1px solid black;
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.page-main {
+  float: left;
+  width: 70%;
+}
+
+.page-sidebar {
+  float: right;
+  width: 25%;
+}
+
+/* ARTIKEL BEGIN */
+
+.teaser {
+  border-bottom: 1px solid black;
+  padding: 2rem;
+}
+
+.teaser:first-of-type {
+  padding-top: 0;
+}
+
+.teaser:last-of-type {
+  border-bottom: none;
+}
+
+.teaser-title {
+  font-family: serif;
+  color: black;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+.teaser-title a {
+  color: inherit;
+}
+
+.teaser-info {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: #ccc;
+}
+
+.teaser-tag-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0.8rem;
+  margin-left: -0.5rem;
+}
+
+.teaser-tag-list li {
+  float: left;
+  margin: 0 0.5rem;
+}
+
+.teaser-btn {
+  float: right;
+}
+
+.tag {
+  background-color: black;
+  color: white;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+}
+
+/* ARTIKLE EINDE */
+
+/* SIDEBAR BEGIN */
+
+.sidebar-block {
+  background-color: lightgrey;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.sidebar-title {
+  margin-top: 0;
+  border-bottom: 1px solid black;
+}
+
+#search {
+  background-color: lightgrey;
+  padding: 1rem;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+/* SIDEBAR EINDE */
+
+/* SUBFOOTER BEGIN */
+
+.subfooter {
+  background-color: darkgrey;
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+.subfooter-col {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+}
+
+.subfooter-col:last-child {
+  margin-right: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.subfooter-title {
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgb(0, 0, 0, 0.1);
+  color: rgb(0, 0, 0, 0.3);
+}
+
+.subfooter-map {
+  width: 100%;
+  height: 250px;
+}
+
+/* SUBFOOTER EINDE */
+
+.main-footer {
+  background-color: #111;
+  padding: 1rem 0;
+  text-align: center;
+}
+

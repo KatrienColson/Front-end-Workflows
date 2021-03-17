@@ -1,0 +1,1123 @@
+/* Poppins Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;0,700;1,300;1,400&display=swap");
+/* Marcellus Font */
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&display=swap");
+
+/* Reset */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Variabele Kleuren */
+/* Variabele Kleuren */
+/* Variabele Kleuren */
+
+:root {
+	--blauw: #242a36;
+	--lichtblauw: #3d465a;
+	--goud: #bda76e;
+	--lichtgoud: #f5e3b5;
+	--wit: #fbfbfb;
+}
+
+/* Globale Stijlen */
+/* Globale Stijlen */
+/* Globale Stijlen */
+
+html {
+	font-size: 10px;
+	overflow-x: hidden;
+	height: 100%;
+}
+
+body {
+	font-family: "Poppins", sans-serif, "Arial", sans-serif;
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Marcellus", serif, "Arial", serif;
+	color: var(--goud);
+}
+
+h1 {
+	font-size: 4.2rem;
+	padding-bottom: 15px;
+}
+
+h2 {
+	font-size: 3.8rem;
+	padding-bottom: 10px;
+}
+
+h3 {
+	font-size: 3.4rem;
+	padding-bottom: 10px;
+}
+
+h4 {
+	font-size: 3rem;
+	padding-bottom: 10px;
+}
+
+h5 {
+	font-size: 2.6rem;
+	padding-bottom: 10px;
+}
+
+h6 {
+	font-size: 2.2rem;
+	padding-bottom: 10px;
+}
+
+p {
+	font-family: "Poppins", sans-serif;
+	font-weight: 300;
+	font-size: 1.6rem;
+	margin-top: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: var(--wit);
+}
+
+ul {
+	list-style: none;
+	margin: 5px 0px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+.container-full {
+	width: 100%;
+	padding: 0 2rem;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1080px;
+	width: 75%;
+	padding: 3rem 2rem;
+	margin: 0 auto;
+}
+
+.button {
+	color: var(--wit);
+	font-size: 1.5rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 1rem 1.5rem;
+	border: none;
+}
+
+.header-content-banner {
+	width: 100vw;
+	min-height: 350px;
+	max-height: 350px;
+	object-fit: cover;
+	position: relative;
+	top: 10px;
+}
+
+/* Buttons */
+
+.button-light {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px 25px;
+	background-color: var(--goud);
+	border: none;
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.button-light:hover {
+	background-color: var(--lichtgoud);
+}
+
+.button-dark {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px 25px;
+	background-color: var(--blauw);
+	border: none;
+	color: white;
+	text-decoration: none;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.button-dark:hover {
+	background-color: var(--lichtblauw);
+}
+
+/* Globale Flex/Grid Framework */
+/* Globale Flex/Grid Framework */
+/* Globale Flex/Grid Framework */
+
+.heading {
+	width: 100%;
+	text-align: center;
+}
+
+.heading:after {
+	content: " ";
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+	border-radius: 50%;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.col-1 {
+	flex: 1 1 auto;
+	width: 95%;
+	min-width: 320px;
+	padding: 25px;
+}
+
+.col-2 {
+	flex: 1 1 auto;
+	width: 47.5%;
+	min-width: 320px;
+	padding: 25px;
+}
+
+.col-3 {
+	flex: 1 1 auto;
+	width: 31.66666%;
+	min-width: 280px;
+	padding: 25px;
+}
+
+/* Header Styling */
+/* Header Styling */
+/* Header Styling */
+
+.header-nav {
+	width: 100%;
+	height: 10rem;
+	display: flex;
+	align-items: top;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	transition: height 0.5s ease;
+}
+
+.logo img {
+	width: 100px;
+	min-width: 100px;
+	height: auto;
+	margin-top: 15px;
+}
+
+.header-nav .container-full {
+	width: 100%;
+	padding: 0 2rem;
+	margin: 0 auto;
+	background: linear-gradient(180deg, rgba(36, 42, 54, 1) 0%, rgba(36, 42, 54, 1) 65%, rgba(36, 42, 54, 0) 100%);
+	transition: background 0.2s ease;
+}
+
+html:not([data-scroll="0"]) .header-nav {
+	height: initial;
+}
+
+html:not([data-scroll="0"]) .header-nav .container-full {
+	background: var(--blauw);
+}
+
+html:not([data-scroll="0"]) .nav-logo img {
+	width: 60px;
+	min-width: 60px;
+	height: auto;
+}
+
+/* MOBILE MENU */
+/* MOBILE MENU */
+/* MOBILE MENU */
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.nav-logo {
+	display: none;
+}
+
+.hamburger-menu {
+	font-size: 3.5rem;
+	color: white;
+	cursor: pointer;
+	position: relative;
+	z-index: 1500;
+}
+
+.hamburger-menu ion-icon {
+	font-size: 55px;
+}
+
+/* X icon om menu te sluiten niet tonen */
+.hamburger-menu .menu-close-icon {
+	display: none;
+}
+
+/* X icon in menu tonen zodra het open geklikt wordt */
+.menu-open .hamburger-menu .menu-close-icon {
+	display: block;
+}
+
+/* Hamburger icon in menu verbergen wanneer menu open is */
+.menu-open .hamburger-menu .menu-icon {
+	display: none;
+}
+
+.nav-list {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	background-color: var(--blauw);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1400;
+	opacity: 0;
+	transform: scale(0);
+	transition: opacity 0.3s ease-in-out;
+}
+
+.menu-open .nav-list {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.nav-item:not(:last-child) {
+	margin-bottom: 1rem;
+}
+
+.nav-link {
+	display: block;
+	color: white;
+	font-size: 3rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	padding: 1.5rem;
+	transition: background 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+	background: var(--wit);
+	color: var(--goud);
+}
+
+/* Hero in header styling */
+/* Hero in header styling */
+/* Hero in header styling */
+
+.header-content {
+	width: 100vw;
+	position: relative;
+	bottom: 15px;
+}
+
+.header-content video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	object-fit: cover;
+	z-index: -2;
+}
+
+.hero {
+	width: 100%;
+	height: 90vh;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	position: relative;
+	z-index: 0;
+}
+
+.hero::before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: inherit;
+	height: inherit;
+	background-color: rgba(36, 42, 54, 0.5);
+	z-index: -1;
+}
+
+.header-text {
+	color: var(--wit);
+	line-height: 1;
+	text-shadow: 1px 1px 1rem rgba(0, 0, 0, 0.5);
+}
+
+.header-text .title {
+	font-family: "Poppins", sans-serif;
+	font-size: 4.8rem;
+	font-weight: 600;
+	color: var(--wit);
+	text-transform: uppercase;
+	margin: 0.5rem;
+}
+
+.header-text .subtitle {
+	font-size: 3.6rem;
+	font-weight: 300;
+	color: var(--wit);
+	margin: 0.5rem;
+	font-style: italic;
+}
+
+.button-hero {
+	margin-top: 50px;
+	background-color: var(--goud);
+	transition: background-color 0.3s ease-in-out;
+}
+
+.button-hero:hover {
+	background-color: var(--blauw);
+}
+
+/* Banner BOEKEN */
+/* Banner BOEKEN */
+/* Banner BOEKEN */
+
+.kamer-boeken {
+	height: 12vh;
+	background-color: var(--blauw);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.kamer-boeken .container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.kamer-boeken h2 {
+	color: var(--goud);
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 30px;
+	margin: 0;
+	padding-bottom: 0px;
+	position: relative;
+	top: 5px;
+}
+
+.kamer-boeken .input-group {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	bottom: 9px;
+}
+
+.kamer-boeken .input-group input[type="date"] {
+	min-width: 180px;
+	border: none;
+	border: 1px solid var(--goud);
+	height: 45px;
+	background-color: rgba(0, 0, 0, 0);
+	color: grey;
+	text-align: center;
+}
+
+.kamer-boeken .input-group input[type="date"]::-webkit-calendar-picker-indicator {
+	filter: invert() brightness(50%);
+}
+
+.kamer-boeken .boeken-form {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.kamer-boeken .boeken-form a {
+	position: relative;
+	top: 5px;
+	padding: 11.5px 25px;
+}
+
+.kamer-boeken label {
+	display: block;
+	margin-bottom: 0.5rem;
+	padding: 0px 8px;
+	background-color: var(--blauw);
+	color: var(--goud);
+	position: relative;
+	top: 13px;
+}
+
+.kamer-boeken .button-beschikbaarheid {
+	background-color: var(--goud);
+	color: var(--wit);
+	transition: color 0.2s ease-in-out;
+	padding: 25px 30px;
+}
+
+.kamer-boeken .button-beschikbaarheid:hover {
+	color: var(--blauw);
+}
+
+/* Nieuwsbrief */
+/* Nieuwsbrief */
+/* Nieuwsbrief */
+
+.nieuwsbrief {
+	width: 100vw;
+	background: linear-gradient(120deg, var(--goud), var(--lichtgoud));
+	padding: 20px 0px;
+}
+
+.nieuwsbrief h2 {
+	color: var(--wit);
+	margin: 0px 0px 15px 0px;
+}
+.nieuwsbrief p {
+	color: var(--wit);
+	margin: 0px 0px 15px 0px;
+	text-align: center;
+}
+
+.nieuwsbrief-column {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.nieuwsbrief-form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.nieuwsbrief-form input[type="email"] {
+	border: 1px solid var(--blauw);
+	color: grey;
+	height: 32px;
+	width: 300px;
+	text-align: center;
+}
+
+.nieuwsbrief-form input[type="submit"] {
+	border: none;
+	background-color: var(--blauw);
+	color: var(--wit);
+	text-align: center;
+	padding: 15px 30px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.nieuwsbrief-form input[type="submit"]:hover {
+	color: white;
+	background-color: #394255;
+}
+
+.nieuwsbrief-form .clear {
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+}
+
+/* Footer */
+/* Footer */
+/* Footer */
+
+.footer {
+	background-color: var(--blauw);
+	width: 100vw;
+	padding: 20px 0px;
+}
+
+.footer .col-3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px 0px;
+}
+
+.footer-image img {
+	width: 120px;
+	opacity: 0.7;
+}
+
+.footer h2 {
+	font-family: "Marcellus", serif;
+	font-size: 3.5rem;
+	margin-bottom: 15px;
+	color: var(--wit);
+}
+
+.footer p {
+	margin: 5px 0px;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.4rem;
+	color: var(--wit);
+}
+
+.footer a {
+	margin: 5px 0px;
+	font-family: "Poppins", sans-serif;
+	font-size: 1.4rem;
+	color: var(--wit);
+	transition: color 0.3s ease;
+}
+
+.footer a:hover {
+	color: var(--goud);
+}
+
+/* Media Queries */
+/* Media Queries */
+/* Media Queries */
+
+/* Verwijder BOEKING-BANNER wanneer hij niet meer past */
+
+@media screen and (max-width: 1270px) {
+	.kamer-boeken {
+		display: none;
+	}
+
+	.hero {
+		height: 100vh;
+	}
+
+	.kamer-boeken {
+		display: none;
+	}
+
+	.hero {
+		height: 100vh;
+	}
+}
+
+/* Menu voor Desktop - CSS */
+
+@media screen and (min-width: 800px) {
+	.hamburger-menu {
+		display: none;
+	}
+
+	.nav-list {
+		position: initial;
+		width: initial;
+		height: initial;
+		flex-direction: row;
+		justify-content: initial;
+		opacity: 1;
+		transform: scale(1);
+		background-color: rgba(0, 0, 0, 0);
+	}
+
+	.nav-item:not(:last-child) {
+		margin-right: 3rem;
+		margin-bottom: 0;
+	}
+
+	.nav-link {
+		font-size: 1.5rem;
+		font-weight: normal;
+		transition: font-size 0.5s ease;
+	}
+
+	.logo {
+		display: none;
+	}
+
+	.nav {
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		right: 21px;
+	}
+
+	.nav-logo {
+		display: initial;
+	}
+
+	.home-button {
+		display: none;
+	}
+
+	.nav-logo img {
+		width: 100px;
+		min-width: 100px;
+		height: auto;
+		transition: all 0.5s ease;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	h1 {
+		font-size: 3.4rem;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 3rem;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h1 {
+		font-size: 3.2rem;
+	}
+
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 2.8rem;
+	}
+}
+
+/* Variabele Kleuren */
+/* Variabele Kleuren */
+/* Variabele Kleuren */
+
+:root {
+	--blauw: #242a36;
+	--lichtblauw: #3d465a;
+	--goud: #bda76e;
+	--lichtgoud: #f5e3b5;
+	--wit: #fbfbfb;
+}
+
+/* Homepage */
+/* Homepage */
+/* Homepage */
+
+/* Welkom Sectie Homepage */
+/* Welkom Sectie Homepage */
+/* Welkom Sectie Homepage */
+
+.welkom {
+	margin: -1.5rem 0rem;
+	width: 100vw;
+	background: url(../images/background-pattern-gold.jpg);
+}
+
+.welkom:focus {
+	border: none;
+}
+
+.welkom .container {
+	padding: 10rem 5rem;
+	display: flex;
+	align-items: center;
+	height: 100%;
+}
+
+.welkom-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.welkom-container h2 {
+	margin: 0px 0px 50px 0px;
+}
+
+/* Banner Sectie Homepage */
+/* Banner Sectie Homepage */
+/* Banner Sectie Homepage */
+
+.content-banner-wrapper {
+	width: 100vw;
+}
+
+.content-banner {
+	position: relative;
+	margin: -1.5rem 0rem;
+	height: 400px;
+	background: url(../images/background.jpg);
+	background-size: cover;
+	background-position: center;
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content-banner:before {
+	content: "";
+	position: absolute;
+	top: 0px;
+	left: 0;
+	width: 100%;
+	height: 400px;
+	background-image: linear-gradient(120deg, var(--blauw), var(--goud));
+	opacity: 0.7;
+	z-index: 1;
+}
+
+.content-banner h2 {
+	text-align: center;
+	z-index: 2;
+	color: var(--wit);
+	padding: 0px 25px;
+}
+
+.feestdagen {
+	font-family: "Marcellus", serif, "Arial", sans-serif;
+	color: #bda76e;
+	font-weight: 100;
+	font-size: 2em;
+}
+
+.feestdagen .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+
+/* Kamers Sectie Homepage */
+/* Kamers Sectie Homepage */
+/* Kamers Sectie Homepage */
+
+.kamers .container {
+	padding: 10rem 2rem;
+}
+
+.kamers .container h2 {
+	margin-bottom: 25px;
+}
+
+.kamer-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.kamer-container h2 {
+	color: var(--blauw);
+	font-size: 2.8rem;
+	margin-bottom: 15px;
+}
+
+.kamer-container .boeken-button {
+	border: none;
+	background-color: var(--blauw);
+	color: var(--wit);
+	text-align: center;
+	width: 100%;
+	margin-top: 20px;
+	padding: 15px 30px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.kamer-container .boeken-button:hover {
+	background-color: var(--lichtblauw);
+	color: var(--wit);
+}
+
+/* EINDE HOMEPAGE */
+/* EINDE HOMEPAGE */
+/* EINDE HOMEPAGE */
+/* EINDE HOMEPAGE */
+/* EINDE HOMEPAGE */
+/* EINDE HOMEPAGE */
+
+/* KAMERS.HTML */
+/* KAMERS.HTML */
+/* KAMERS.HTML */
+
+.boeken-form h1 {
+	color: var(--goud);
+	font-family: "Poppins", sans-serif;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: 3rem;
+	margin: 0;
+	padding-bottom: 0px;
+}
+
+.tweepersoonskamer {
+	margin-top: -15px;
+	padding: 50px 0px;
+	background-color: var(--wit);
+}
+
+.luxekamer {
+	padding: 50px 0px;
+	background-color: var(--blauw);
+	color: white;
+}
+
+.familiekamer {
+	padding: 50px 0px;
+	background-color: var(--wit);
+}
+
+.button-center {
+	display: flex;
+	justify-content: center;
+}
+
+.kamer-boeken-button {
+	border: none;
+	background-color: var(--blauw);
+	color: var(--wit);
+	padding: 15px 45px;
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.kamer-boeken-button:hover {
+	background-color: var(--lichtblauw);
+}
+
+.luxekamer .kamer-boeken-button {
+	background-color: var(--goud);
+	color: var(--wit);
+}
+
+.luxekamer .kamer-boeken-button:hover {
+	background-color: var(--lichtgoud);
+	color: var(--wit);
+}
+
+.luxekamer .heading:after {
+	border-bottom: 2px solid rgba(240, 240, 240, 0.3);
+}
+
+.luxekamer ul li {
+	color: rgb(192, 192, 192);
+}
+
+/* Styling 2 Persoonskamer */
+
+.kamer-1 h4 {
+	font-family: "Poppins", sans-serif;
+}
+
+/* Styling Luxekamer */
+
+.kamer-2 h4 {
+	font-family: "Poppins", sans-serif;
+	color: var(--goud);
+}
+
+.kamer-2 p {
+	color: rgb(216, 216, 216);
+}
+
+/* Styling Familiekamer */
+
+.kamer-3 h4 {
+	font-family: "Poppins", sans-serif;
+}
+
+/* Slider Styling */
+
+.splide__slide {
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 550px;
+}
+
+.splide__slide img {
+	height: 480px;
+	transition: height 0.5s ease;
+}
+
+.splide__slide.is-active {
+	height: 550px;
+}
+
+.splide__slide.is-active img {
+	height: 550px;
+}
+
+@media screen and (max-width: 1080px) {
+	.splide__slide {
+		height: 400px;
+	}
+
+	.splide__slide img {
+		height: 350px;
+	}
+
+	.splide__slide.is-active {
+		height: 400px;
+	}
+
+	.splide__slide.is-active img {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.splide__slide {
+		height: 350px;
+	}
+
+	.splide__slide img {
+		height: 350px;
+	}
+
+	.splide__slide.is-active {
+		height: 350px;
+	}
+
+	.splide__slide.is-active img {
+		height: 350px;
+	}
+}
+
+/* ----------------- */
+/* ----------------- */
+/* VERGADERZAAL.HTML */
+/* ----------------- */
+/* ----------------- */
+
+/* ----------------- */
+/* ----------------- */
+/* KAMER-BOEKEN.HTML */
+/* ----------------- */
+/* ----------------- */
+
+/* Geen styling nodig */
+
+/* ------------ */
+/* ------------ */
+/* CONTACT.HTML */
+/* ------------ */
+/* ------------ */
+
+.contact-moreinfo iframe {
+	margin: 35px 0px 15px 0px;
+}
+
+.contact-moreinfo h2 {
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
+.facebook-icon {
+	width: 50px;
+	height: 50px;
+	max-width: initial;
+	min-width: initial;
+	min-height: initial;
+	background-color: var(--blauw);
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.twitter-icon {
+	width: 50px;
+	height: 50px;
+	max-width: initial;
+	min-width: initial;
+	min-height: initial;
+	background-color: var(--blauw);
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.instagram-icon {
+	width: 50px;
+	height: 50px;
+	max-width: initial;
+	min-width: initial;
+	min-height: initial;
+	background-color: var(--blauw);
+	border-radius: 3px;
+	padding: 10px;
+	color: white;
+	cursor: pointer;
+}
+
+.contact-moreinfo iframe {
+	width: 100%;
+	height: 300px;
+	border: 0;
+}
+
+.contact-moreinfo a {
+	color: var(--blauw);
+	transition: color 0.3s ease;
+}
+
+.contact-moreinfo a:hover {
+	color: var(--goud);
+}
+
+/* ---------------- */
+/* ---------------- */
+/* Voorwaarden.HTML */
+/* ---------------- */
+/* ---------------- */
+
+.voorwaardenpagina {
+	padding: 50px 0px;
+}
