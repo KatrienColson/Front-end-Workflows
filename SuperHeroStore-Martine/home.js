@@ -54,11 +54,7 @@ const home = {
                 scope.$root.showWinkelwagen = true;
                 scope.showBesteld[index] = true;
             }, 500, this);
-            //in de function verwijst this naar de function, niet naar de data van Vue
-            //oplossing: we geven een argument mee "scope" en achteraan definiëren wat deze scope moet zijn: "this" dus
-            // console.log("this.showWinkelwagen" + this.showWinkelwagen)
         }
-
     },
     mounted() {
         if (localStorage.getItem("winkelwagen")) {
@@ -73,7 +69,6 @@ const home = {
                     }
                 })
             })
-
         }
         if (localStorage.getItem("showCookieMelding")) {
             this.$root.showCookieMelding = JSON.parse(localStorage.getItem("showCookieMelding"))
