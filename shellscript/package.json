@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "gulp-dart-sass": "^1.0.2",
+    "htmlmin": "^0.0.7"
+  }
+}
